@@ -1,0 +1,36 @@
+// Given an array of unsorted numbers, return the index of the following target if the target exists in the array. If the target is not found, return null
+// let num = [45,12,6,89,2,5]
+// let target = 6
+function binary (num,target){
+    let left = 0;
+    let right = num.length -1;
+    while(left<=right){
+        let middle=Math.floor((left+right)/2);
+        if(num [middle ]===target){
+            return middle
+        }
+        else if
+            (num[middle]<target){
+                left =middle+1;
+            }
+            else{
+                right=middle-1;
+            }
+        }
+        return null
+    }
+    let num = [45,12,6,89,2,5]
+    let target = 6
+//     console.log(num,target)
+//     Given an unsorted array of numbers return the sorted array in descending order
+// let arr=[123,89,5,23,9,56]
+function mergeSort(arrays) {
+    if (arrays.length <= 1) return arrays
+    let mid = Math.floor(arrays.length / 2)
+    let left = mergeSort(arrays.slice(0, mid))
+    let right = mergeSort(arrays.slice(mid))
+    return merge(left,right);
+     console.log( merge(left, right));
+  }
+  let arrays = [[123,89,5,23,9,56]];
+  console.log(mergeSort(arrays));
